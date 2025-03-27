@@ -1,38 +1,145 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #2F3265;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 700px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: 'Lexend';
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #111;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-family: 'Lexend';
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-family: 'Lexend';
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 1.5rem;
+}
+
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.flex-column {
+  width: 48%;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.income-column {
+  background-color: #d4edda;
+}
+
+.expense-column {
+  background-color: #f8d7da;
+}
+
+input[type="text"], input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lexend';
+}
+
+button {
+  background-color: #F8F8F8;
+  border: 2px solid #CECFCE;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Lexend';
+}
+
+button:hover {
+  background-color: #252750;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.income-list,
+.expense-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.total {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.task > div {
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.income-list .task div, .expense-list .task div {
+  text-align: left;
 }
