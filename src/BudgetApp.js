@@ -67,6 +67,7 @@ const BudgetCalculator = () => {
                             type="text"
                             placeholder="Income name"
                             value={incomeName}
+                            maxLength={26}
                             onChange={(e) => setIncomeName(e.target.value)}
                         />
                         <input
@@ -88,7 +89,8 @@ const BudgetCalculator = () => {
                             </li>
                         ))}
                     </ul>
-                    <h3 className="total">Total income: ${totalIncome.toFixed(2)}</h3>
+                    <h3 className="total">Total income: </h3>
+                    <h3 className="total">${totalIncome.toFixed(2)}</h3>
                     <button onClick={addIncome}>Add the income</button>
                 </div>
 
@@ -99,6 +101,7 @@ const BudgetCalculator = () => {
                             type="text"
                             placeholder="Expense name"
                             value={expenseName}
+                            maxLength={26}
                             onChange={(e) => setExpenseName(e.target.value)}
                         />
                         <input
@@ -116,13 +119,14 @@ const BudgetCalculator = () => {
                                     <strong>{expense.name}</strong>: ${expense.amount.toFixed(2)}
                                 </div>
                                 <button className="delete-button" onClick={() => deleteExpense(index)}>
-                                    Видалити
+                                    Delete
                                 </button>
                             </li>
                         ))}
                     </ul>
 
-                    <h3 className="total">Total expenses: ${totalExpenses.toFixed(2)}</h3>
+                    <h3 className="total">Total expenses: </h3>
+                    <h3 className="total">${totalExpenses.toFixed(2)}</h3>
                     <button onClick={addExpense}>Add the expense</button>
                 </div>
             </div>
