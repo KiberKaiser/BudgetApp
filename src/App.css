@@ -18,7 +18,8 @@ body {
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
   text-align: center;
 }
 
@@ -45,13 +46,12 @@ h3 {
 
 .flex-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 40px;
 }
 
 .flex-column {
-  width: 48%;
+  width: 95%;
   padding: 10px;
   background-color: #f8f9fa;
   border-radius: 8px;
@@ -95,8 +95,6 @@ button:hover {
   background-color: #252750;
   color: white;
 }
-
-
 
 .income-list,
 .expense-list {
@@ -142,4 +140,27 @@ button:hover {
 
 .income-list .task div, .expense-list .task div {
   text-align: left;
+}
+
+@media (min-width: 600px)  {
+  .flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .flex-column {
+    width: 48%;
+  }
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    width: 700px;
+  }
 }
